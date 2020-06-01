@@ -1,1 +1,22 @@
-xxx
+mkdir koa-demo
+cd koa-demo
+npm init
+npm i @babel/core @babel/node @babel/preset-env -D
+npm i eslint -g
+eslint --init
+cd.>.babelrc
+{
+	"presets":["@babel/preset-env"]
+}
+npm i koa
+cd.>lesson.js
+import Koa from 'koa'
+const app = new Koa()
+app.use(async ctx=>{
+	ctx.body="hello world"
+})
+app.listen(3000)
+cd.>app.js
+import './lesson.js'
+npm i nodemon -D
+package.json => "start":"nodemon --exec babel-node app.js"
