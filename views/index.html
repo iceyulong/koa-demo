@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./index.js"></script>
+</head>
+<body>
+    <h3>underscore</h3>
+    <h3>msg:<%=message%></h3>
+    <img src="./logo.jpg" alt="" style="width: 50px; height:50px;">
+    <ul>
+        <%
+            _.each(list,function(item){
+                print(`<li>${item}</li>`)
+            })
+        %>
+    </ul>
+</body>
+</html>
